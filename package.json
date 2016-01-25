@@ -1,0 +1,25 @@
+{
+  "name": "education-corporation-of-america",
+  "version": "1.0.0",
+  "description": "ECA redesign",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Razorfish",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "dependencies": {
+    "react": "^0.14.6",
+    "reflux": "^0.3.0"
+  }
+}
