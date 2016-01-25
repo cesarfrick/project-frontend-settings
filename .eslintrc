@@ -23,11 +23,13 @@
     "no-var": 2,
     "prefer-const": 2,
     "prefer-arrow-callback": 1,
-    "prefer-template": 1
+    "prefer-template": 1,
+    "no-console": 0
   },
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "extends": "eslint:recommended",
   "ecmaFeatures": {
