@@ -12,12 +12,16 @@ gulp.task('lint:js', () => {
                .pipe(linter.failAfterError());
 });
 
-gulp.task('browserify',['lint:js'], () => {
-    return browserify('./app/src/javascript/main.js')
-            .transform(babelify)
-            .bundle()
-            .pipe(source('bundle.js'))
-            .pipe(gulp.dest('./app/dist/javascript/'));
+gulp.task('build:dev', ['lint:js'], () => {
+    return browserify('./app/src/javascript/main.js', {debug: true})
+                .transform(babelify)
+                .bundle()
+                .pipe(source('bundle.js'))
+                .pipe(gulp.dest('./app/dist/javascript/'));
+});
+
+gulp.task('watch:js', ['lint:js'], () => {
+    return gulp.watch('./app/src/javascript/**/*.js', ['build:dev']);
 });
 
 gulp.task('default', () => {
