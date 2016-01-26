@@ -1,6 +1,9 @@
-const test = 'Hello World';
+import greetings from './greetings';
+
 const myBadFunction = () => {
-    console.log(test);
+    const titleEl = document.querySelector('#greetings-title');
+    const greeting = greetings();
+    titleEl.textContent = `${greeting} Cesar`;
 };
 
 myBadFunction();

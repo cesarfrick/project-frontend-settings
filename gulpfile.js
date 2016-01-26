@@ -1,8 +1,9 @@
 const gulp = require('gulp');
-const babel = require('gulp-babel');
 const linter = require('gulp-eslint');
 const browserify = require('browserify');
-const sourcemaps =  require('gulp-sourcemaps');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+//const sourcemaps =  require('gulp-sourcemaps');
 
 gulp.task('lint:js', () => {
     return gulp.src(['app/src/javascript/**/*.js', '!node_modules/**'])
@@ -11,10 +12,12 @@ gulp.task('lint:js', () => {
                .pipe(linter.failAfterError());
 });
 
-gulp.task('babel', ['lint:js'], () => {
-    return gulp.src(['app/src/javascript/**/*.js', '!node_modules/**'])
-               .pipe(babel())
-               .pipe(gulp.dest('dist/javascript'));
+gulp.task('browserify',['lint:js'], () => {
+    return browserify('./app/src/javascript/main.js')
+            .transform(babelify)
+            .bundle()
+            .pipe(source('bundle.js'))
+            .pipe(gulp.dest('./app/dist/javascript/'));
 });
 
 gulp.task('default', () => {
