@@ -1,7 +1,7 @@
 {
-  "name": "education-corporation-of-america",
+  "name": "basic-gulp-es6-sass-settings",
   "version": "1.0.0",
-  "description": "ECA redesign",
+  "description": "Setting the basic environment to work with ES6 and Sass based on gulp",
   "scripts": {
     "gulp": "gulp"
   },
@@ -13,13 +13,8 @@
     "browserify": "^13.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
     "gulp-eslint": "^1.1.1",
-    "gulp-sourcemaps": "^1.6.0",
     "vinyl-source-stream": "^1.1.0"
   },
-  "dependencies": {
-    "react": "^0.14.6",
-    "reflux": "^0.3.0"
-  }
+  "dependencies": {}
 }
