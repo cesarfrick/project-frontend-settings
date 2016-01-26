@@ -1,2 +1,5 @@
+# Folders
 node_modules
 _comps
+#Mac Files
+.DS_Store
