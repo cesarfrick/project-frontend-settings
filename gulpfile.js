@@ -26,7 +26,7 @@ gulp.task('server', () => {
         }
     });
 
-    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch('./app/**/*.html').on('change', browserSync.reload);
 });
 
 /* Development */

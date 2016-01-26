@@ -1,5 +1,9 @@
 .l-test {
-    transform: rotate(10deg);
+    background-color: lighten($text-color, 10%);
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    transform: rotate(-2deg);
 }
 
 .l-title {
