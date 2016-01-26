@@ -5,14 +5,14 @@ const browserify = require('browserify');
 const sourcemaps =  require('gulp-sourcemaps');
 
 gulp.task('lint:js', () => {
-    return gulp.src(['src/javascript/**/*.js', '!node_modules/**'])
+    return gulp.src(['app/src/javascript/**/*.js', '!node_modules/**'])
                .pipe(linter())
                .pipe(linter.format())
                .pipe(linter.failAfterError());
 });
 
 gulp.task('babel', ['lint:js'], () => {
-    return gulp.src(['src/javascript/**/*.js', '!node_modules/**'])
+    return gulp.src(['app/src/javascript/**/*.js', '!node_modules/**'])
                .pipe(babel())
                .pipe(gulp.dest('dist/javascript'));
 });

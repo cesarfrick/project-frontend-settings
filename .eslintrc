@@ -35,7 +35,8 @@
   "ecmaFeatures": {
     "jsx": true,
     "experimentalObjectRestSpread": true,
-    "blockBindings": true
+    "blockBindings": true,
+    "modules": true
   },
   "plugins": [
     "react"
